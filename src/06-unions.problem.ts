@@ -1,4 +1,4 @@
-interface User {
+ interface User {
   id: number;
   firstName: string;
   lastName: string;
@@ -8,13 +8,20 @@ interface User {
    * - 'user'
    * - 'super-admin'
    */
-  role: string;
+ role:string;
 }
+     enum role{
+    "admin",
+    "user",
+    "super-admin",
 
+
+  }
 export const defaultUser: User = {
   id: 1,
   firstName: "Matt",
   lastName: "Pocock",
+
   // @ts-expect-error
-  role: "I_SHOULD_NOT_BE_ALLOWED",
+  role:"admin",
 };

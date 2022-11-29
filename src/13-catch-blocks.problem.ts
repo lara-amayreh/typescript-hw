@@ -5,10 +5,10 @@ const tryCatchDemo = (state: "fail" | "succeed") => {
     if (state === "fail") {
       throw new Error("Failure!");
     }
-  } catch (e) {
+  } catch (e: any) {
     return e.message;
   }
-};
+}
 
 it("Should return the message when it fails", () => {
   expect(tryCatchDemo("fail")).toEqual("Failure!");
